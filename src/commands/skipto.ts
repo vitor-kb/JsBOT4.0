@@ -17,15 +17,15 @@ export default class SkipToCommand extends Command {
       interaction.reply({
         embeds: [
           new EmbedBuilder()
-            .setColor("Blurple")
-            .setTitle("DisTube")
+            .setColor("Blue")
+            .setTitle("JsBOT4.0")
             .setDescription(`Skipped to \`${song.name || song.url}\``),
         ],
       });
     } catch (e) {
       console.error(e);
       interaction.reply({
-        embeds: [new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription(`Error: \`${e}\``)],
+        embeds: [new EmbedBuilder().setColor("Red").setTitle("JsBOT4.0").setDescription(`Erro: \`${e}\``)],
       });
     }
   }

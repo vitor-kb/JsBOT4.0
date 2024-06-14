@@ -8,16 +8,16 @@ export default class PlayCommand extends Command {
   override readonly inVoiceChannel = true;
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("play")
-    .setDescription("Play music from a supported URL (all provider) or search a query")
-    .addStringOption(opt => opt.setName("input").setDescription("A supported URL or a search query").setRequired(true))
+    .setDescription("Toca música de uma URL suportada ou insira um texto para procura.")
+    .addStringOption(opt => opt.setName("url/texto").setDescription("Uma URL suportada ou texto para procura").setRequired(true))
     .addBooleanOption(opt =>
-      opt.setName("skip").setDescription("Skip the current song (Available if vote skip is off)").setRequired(false),
+      opt.setName("skip").setDescription("Pula a musica atual").setRequired(false),
     )
     .addIntegerOption(opt =>
-      opt.setName("position").setDescription("Position will be added to the queue").setRequired(false),
+      opt.setName("position").setDescription("A posicao vai ser adicionada a fila").setRequired(false),
     );
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
-    const input = interaction.options.getString("input", true);
+    const input = interaction.options.getString("url/texto", true);
     const skip = interaction.options.getBoolean("skip", false) ?? false;
     const position = interaction.options.getInteger("position", false) ?? undefined;
     const vc = interaction.member?.voice?.channel;
@@ -35,7 +35,7 @@ export default class PlayCommand extends Command {
         console.error(e);
         interaction.editReply({
           embeds: [
-            new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription(`Error: \`${e.message}\``),
+            new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription(`Erro: \`${e.message}\``),
           ],
         });
       });

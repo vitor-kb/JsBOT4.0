@@ -69,7 +69,7 @@ class DisTubeClient extends Client<true> {
       console.log(`Comando carregado: ${cmd.name}.`);
       return false;
     } catch (err: any) {
-      const e = `Unable to load command ${name}: ${err.stack || err}`;
+      const e = `Nao foi possivel carregar o comando ${name}: ${err.stack || err}`;
       console.error(e);
       return e;
     }
@@ -80,10 +80,10 @@ class DisTubeClient extends Client<true> {
       const event = new E.default(this);
       const fn = event.run.bind(event);
       this.on(event.name, fn);
-      console.log(`Listened client event: ${event.name}.`);
+      console.log(`Evento lido: ${event.name}.`);
       return false;
     } catch (err: any) {
-      const e = `Unable to listen "${name}" event: ${err.stack || err}`;
+      const e = `Nao foi possivel ler "${name}" evento: ${err.stack || err}`;
       console.error(e);
       return e;
     }
@@ -95,10 +95,10 @@ class DisTubeClient extends Client<true> {
       const event = new E.default(this);
       const fn = event.run.bind(event);
       this.distube.on(event.name, fn);
-      console.log(`Listened DisTube event: ${event.name}.`);
+      console.log(`Evento do DisTube: ${event.name}.`);
       return false;
     } catch (err: any) {
-      const e = `Unable to listen "${name}" event: ${err.stack || err}`;
+      const e = `Nao foi possivel ler o "${name}" evento: ${err.stack || err}`;
       console.error(e);
       return e;
     }

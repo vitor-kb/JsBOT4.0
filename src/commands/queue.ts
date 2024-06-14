@@ -15,14 +15,14 @@ export default class QueueCommand extends Command {
     await interaction.reply({
       embeds: [
         new EmbedBuilder()
-          .setColor("Blurple")
-          .setTitle("DisTube")
+          .setColor("Blue")
+          .setTitle("JsBOT4.0")
           .setDescription(
             [
-              `**Current:** \`${song.name || song.url}\` - \`${queue.formattedCurrentTime}\`/\`${
+              `**Atual:** \`${song.name || song.url}\` - \`${queue.formattedCurrentTime}\`/\`${
                 song.stream.playFromSource ? song.formattedDuration : song.stream.song?.formattedDuration
               }\`\n`,
-              `**Up next**\n${
+              `**Proxima**\n${
                 queue.songs
                   .slice(1, 10)
                   .map((song, i) => `**${i + 1}.** \`${song.name || song.url}\``)
@@ -49,7 +49,7 @@ export default class QueueCommand extends Command {
               inline: true,
             },
             {
-              name: "Filters",
+              name: "Filtros",
               value: `${queue.filters.names.join(", ") || "Off"}`,
               inline: false,
             },

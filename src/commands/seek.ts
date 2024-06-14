@@ -8,16 +8,16 @@ export default class SeekCommand extends Command {
   override readonly playing = true;
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("seek")
-    .setDescription("Seek the current song")
+    .setDescription("Procura um tempo específico no video/musica")
     .addNumberOption(option =>
-      option.setName("time").setDescription("The time to seek (in seconds)").setMinValue(0).setRequired(true),
+      option.setName("time").setDescription("O tempo (em segundos)").setMinValue(0).setRequired(true),
     );
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
     const time = interaction.options.getNumber("time", true);
     this.distube.seek(interaction, time);
     await interaction.reply({
       embeds: [
-        new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription(`Seeked to \`${time}\` seconds`),
+        new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription(`Pulou para \`${time}\` segundos`),
       ],
     });
   }

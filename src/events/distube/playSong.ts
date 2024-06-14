@@ -8,7 +8,7 @@ export default class PlaySongEvent extends DisTubeEvent<Events.PLAY_SONG> {
   run(queue: Queue, song: Song<Metadata>) {
     followUp(
       song.metadata.interaction,
-      new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription(`Playing: \`${song.name}\``),
+      new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription(`Tocando: \`${song.name}\``),
       queue.textChannel!,
     ).catch(console.error);
   }

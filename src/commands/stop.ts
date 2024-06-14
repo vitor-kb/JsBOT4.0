@@ -6,17 +6,17 @@ export default class StopCommand extends Command {
   readonly name = "stop";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
-  readonly slashBuilder = new SlashCommandBuilder().setName("stop").setDescription("Stop the playing queue");
+  readonly slashBuilder = new SlashCommandBuilder().setName("stop").setDescription("Para a fila");
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
     try {
       await this.distube.stop(interaction);
       interaction.reply({
-        embeds: [new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription("Stopped!")],
+        embeds: [new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription("Fila zerada!")],
       });
     } catch (e) {
       console.error(e);
       interaction.reply({
-        embeds: [new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription(`Error: \`${e}\``)],
+        embeds: [new EmbedBuilder().setColor("Red").setTitle("JsBOT4.0").setDescription(`Erro: \`${e}\``)],
       });
     }
   }

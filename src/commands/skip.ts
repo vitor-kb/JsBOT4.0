@@ -6,22 +6,22 @@ export default class SkipCommand extends Command {
   readonly name = "skip";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
-  readonly slashBuilder = new SlashCommandBuilder().setName("skip").setDescription("Skip the current song");
+  readonly slashBuilder = new SlashCommandBuilder().setName("skip").setDescription("Pula a musica atual");
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
     try {
       const song = await this.distube.skip(interaction);
       interaction.reply({
         embeds: [
           new EmbedBuilder()
-            .setColor("Blurple")
-            .setTitle("DisTube")
-            .setDescription(`Skipped to \`${song.name || song.url}\``),
+            .setColor("Blue")
+            .setTitle("JsBOT4.0")
+            .setDescription(`Pulou para \`${song.name || song.url}\``),
         ],
       });
     } catch (e) {
       console.error(e);
       interaction.reply({
-        embeds: [new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription(`Error: \`${e}\``)],
+        embeds: [new EmbedBuilder().setColor("Red").setTitle("JsBOT4.0").setDescription(`Erro: \`${e}\``)],
       });
     }
   }

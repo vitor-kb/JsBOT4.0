@@ -6,7 +6,7 @@ export default class FinishEvent extends DisTubeEvent<Events.FINISH> {
   readonly name = Events.FINISH;
   run(queue: Queue) {
     queue.textChannel?.send({
-      embeds: [new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription("Finished!")],
+      embeds: [new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription("Fila finalizada!")],
     });
     queue.voice.leave();
   }

@@ -8,16 +8,16 @@ export default class VolumeCommand extends Command {
   override readonly playing = true;
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("volume")
-    .setDescription("Set the volume")
+    .setDescription("Escolha o volume")
     .addNumberOption(option =>
-      option.setName("volume").setDescription("The volume to set").setMinValue(0).setMaxValue(1000).setRequired(true),
+      option.setName("volume").setDescription("O volume a ser escolhido").setMinValue(0).setMaxValue(1000).setRequired(true),
     );
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
     const volume = interaction.options.getNumber("volume", true);
     this.distube.setVolume(interaction, volume);
     await interaction.reply({
       embeds: [
-        new EmbedBuilder().setColor("Blurple").setTitle("DisTube").setDescription(`Set volume to \`${volume}\``),
+        new EmbedBuilder().setColor("Blue").setTitle("JsBOT4.0").setDescription(`Volume em: \`${volume}\``),
       ],
     });
   }

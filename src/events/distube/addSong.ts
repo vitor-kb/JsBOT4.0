@@ -9,9 +9,9 @@ export default class AddSongEvent extends DisTubeEvent<Events.ADD_SONG> {
     song.metadata.interaction.editReply({
       embeds: [
         new EmbedBuilder()
-          .setColor("Blurple")
-          .setTitle("DisTube")
-          .setDescription(`Added \`${song.name}\` to the queue`),
+          .setColor("Blue")
+          .setTitle("JsBOT4.0")
+          .setDescription(`Adicionado \`${song.name}\` para a fila`)
       ],
     });
   }
