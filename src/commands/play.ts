@@ -9,7 +9,7 @@ export default class PlayCommand extends Command {
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("play")
     .setDescription("Toca música de uma URL suportada ou insira um texto para procura.")
-    .addStringOption(opt => opt.setName("url/texto").setDescription("Uma URL suportada ou texto para procura").setRequired(true))
+    .addStringOption(opt => opt.setName("input").setDescription("Uma URL suportada ou texto para procura").setRequired(true))
     .addBooleanOption(opt =>
       opt.setName("skip").setDescription("Pula a musica atual").setRequired(false),
     )
@@ -17,7 +17,7 @@ export default class PlayCommand extends Command {
       opt.setName("position").setDescription("A posicao vai ser adicionada a fila").setRequired(false),
     );
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
-    const input = interaction.options.getString("url/texto", true);
+    const input = interaction.options.getString("input", true);
     const skip = interaction.options.getBoolean("skip", false) ?? false;
     const position = interaction.options.getInteger("position", false) ?? undefined;
     const vc = interaction.member?.voice?.channel;

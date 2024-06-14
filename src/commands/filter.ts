@@ -4,11 +4,11 @@ import type { ChatInputCommandInteraction } from "discord.js";
 import { defaultFilters } from "distube";
 
 export default class FilterCommand extends Command {
-  readonly name = "filtro";
+  readonly name = "filter";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
   readonly slashBuilder = new SlashCommandBuilder()
-    .setName("filtro")
+    .setName("filter")
     .setDescription("Escolha o filtro")
     .addStringOption(option =>
       option
@@ -18,7 +18,7 @@ export default class FilterCommand extends Command {
         .addChoices(...Object.keys(defaultFilters).map(k => ({ name: k, value: k }))),
     );
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
-    const filter = interaction.options.getString("filtro", true);
+    const filter = interaction.options.getString("filter", true);
     const filters = this.distube.getQueue(interaction)!.filters;
     if (filters.has(filter)) filters.remove(filter);
     else filters.add(filter);
