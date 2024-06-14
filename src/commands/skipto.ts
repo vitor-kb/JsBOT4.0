@@ -8,7 +8,7 @@ export default class SkipToCommand extends Command {
   override readonly playing = true;
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("skipto")
-    .setDescription("Skip to a specific position")
+    .setDescription("Pula para uma posicao especifica")
     .addIntegerOption(option => option.setName("position").setDescription("Position to skip to").setRequired(true));
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
     try {
