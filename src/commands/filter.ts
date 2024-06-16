@@ -9,7 +9,7 @@ export default class FilterCommand extends Command {
   override readonly playing = true;
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("filter")
-    .setDescription("Set the filter")
+    .setDescription("Adiciona um filtro")
     .addStringOption(option =>
       option
         .setName("filter")
