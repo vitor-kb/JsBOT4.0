@@ -9,11 +9,11 @@ export default class FilterCommand extends Command {
   override readonly playing = true;
   readonly slashBuilder = new SlashCommandBuilder()
     .setName("filter")
-    .setDescription("Escolha o filtro")
+    .setDescription("Set the filter")
     .addStringOption(option =>
       option
-        .setName("filtro")
-        .setDescription("Filtro a ser escolhido")
+        .setName("filter")
+        .setDescription("Filtro a ser selecionado")
         .setRequired(true)
         .addChoices(...Object.keys(defaultFilters).map(k => ({ name: k, value: k }))),
     );
