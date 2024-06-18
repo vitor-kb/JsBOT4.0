@@ -7,7 +7,7 @@ export default class QueueCommand extends Command {
   readonly name = "queue";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
-  readonly slashBuilder = new SlashCommandBuilder().setName("queue").setDescription("Show the current queue status");
+  readonly slashBuilder = new SlashCommandBuilder().setName("queue").setDescription("Mostra o status da fila");
   async onChatInput(interaction: ChatInputCommandInteraction<"cached">) {
     const queue = this.distube.getQueue(interaction);
     if (!queue) return; // Handled by playing property
