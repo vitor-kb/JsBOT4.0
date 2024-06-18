@@ -9,11 +9,11 @@ export default class InteractionCreateEvent extends ClientEvent<"interactionCrea
       const cmd = this.client.commands.get(interaction.commandName);
       if (!cmd) return;
       if (cmd.inVoiceChannel && !interaction.member.voice.channel) {
-        interaction.reply("You must be in a voice channel to use this command!");
+        interaction.reply("Você precisa estar em um canal de voz para usar esse comando!");
         return;
       }
       if (cmd.playing && !this.distube.getQueue(interaction)) {
-        interaction.reply("You must play something before using this command!");
+        interaction.reply("Uma musica precisa estar tocando para usar esse comando!");
         return;
       }
       await cmd.onChatInput(interaction);
