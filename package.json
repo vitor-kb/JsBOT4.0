@@ -33,7 +33,7 @@
     "sodium-native": "^4.1.1"
   },
   "devDependencies": {
-    "@types/node": "^20.14.9",
+    "@types/node": "^20.14.10",
     "discord.js": "^14.15.3",
     "eslint": "^9.6.0",
     "eslint-config-distube": "^1.7.0",
