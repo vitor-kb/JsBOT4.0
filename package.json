@@ -54,5 +54,6 @@
     "*.{json,yml,yaml,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "main": "index.js"
 }
