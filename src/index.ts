@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { join } from "path";
 import { readdirSync } from "fs";
 import { DisTube } from "distube";

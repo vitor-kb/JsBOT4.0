@@ -2,3 +2,5 @@ pnpm-lock.yaml
 node_modules
 .env
 package-lock.json
+eslint.config.mjs
+.eslint.json
