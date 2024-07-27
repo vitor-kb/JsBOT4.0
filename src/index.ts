@@ -21,6 +21,7 @@ import type {
 import SoundCloudPlugin from "@distube/soundcloud";
 import DeezerPlugin from "@distube/deezer";
 import { DirectLinkPlugin } from "@distube/direct-link";
+import { YtDlpPlugin } from "@distube/yt-dlp";
 import dotenv from "dotenv";
 import fs from "fs";
 
@@ -50,6 +51,7 @@ class DisTubeClient extends Client<true> {
       new DeezerPlugin(),
       new DirectLinkPlugin(),
       new FilePlugin(),
+      new YtDlpPlugin({update: true})
     ],
     emitAddListWhenCreatingQueue: true,
     emitAddSongWhenCreatingQueue: true,

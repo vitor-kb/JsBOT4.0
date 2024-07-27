@@ -27,6 +27,7 @@
         "@distube/soundcloud": "^2.0.3",
         "@distube/spotify": "^2.0.2",
         "@distube/youtube": "^1.0.2",
+        "@distube/yt-dlp": "^2.0.1",
         "@distube/ytdl-core": "^4.13.5",
         "discord.js": "^14.15.3",
         "distube": "^5.0.2",
@@ -34,17 +35,17 @@
         "sodium-native": "^4.1.1"
     },
     "devDependencies": {
-        "@eslint/js": "^9.6.0",
-        "@types/node": "^20.14.10",
+        "@eslint/js": "^9.7.0",
+        "@types/node": "^20.14.12",
         "discord.js": "^14.15.3",
-        "eslint": "^9.6.0",
+        "eslint": "^9.7.0",
         "eslint-config-distube": "^1.7.0",
         "globals": "^15.8.0",
-        "prettier": "^3.3.2",
+        "prettier": "^3.3.3",
         "ts-node": "^10.9.2",
-        "tsup": "^8.1.0",
-        "typescript": "^5.5.3",
-        "typescript-eslint": "^7.16.0"
+        "tsup": "^8.2.3",
+        "typescript": "^5.5.4",
+        "typescript-eslint": "^7.17.0"
     },
     "nano-staged": {
         "*.js": [
