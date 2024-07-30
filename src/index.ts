@@ -51,7 +51,7 @@ class DisTubeClient extends Client<true> {
       new DeezerPlugin(),
       new DirectLinkPlugin(),
       new FilePlugin(),
-      new YtDlpPlugin({update: true})
+      new YtDlpPlugin()
     ],
     emitAddListWhenCreatingQueue: true,
     emitAddSongWhenCreatingQueue: true,
