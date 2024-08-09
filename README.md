@@ -1,5 +1,3 @@
-# DisTube Example
+# JsBOT4.0
 
-DisTube v5 example music bot with command handler
-
-**Dependencies maybe outdated. You should update them yourself!**
+Bot com fork no Distube
