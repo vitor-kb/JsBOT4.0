@@ -35,10 +35,10 @@
         "sodium-native": "^4.2.0"
     },
     "devDependencies": {
-        "@eslint/js": "^9.10.0",
+        "@eslint/js": "^9.11.0",
         "@types/node": "^22.5.5",
         "discord.js": "^14.16.2",
-        "eslint": "^9.10.0",
+        "eslint": "^9.11.0",
         "eslint-config-distube": "^1.7.1",
         "globals": "^15.9.0",
         "prettier": "^3.3.3",
