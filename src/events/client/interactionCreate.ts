@@ -1,7 +1,7 @@
 import { ClientEvent } from "../..";
 import type { Interaction } from "discord.js";
 
-export default class InteractionCreateEvent extends ClientEvent<"interactionCreate"> {
+class InteractionCreateEvent extends ClientEvent<"interactionCreate"> {
   readonly name = "interactionCreate";
   async run(interaction: Interaction) {
     if (!interaction.inCachedGuild()) return;
@@ -20,3 +20,5 @@ export default class InteractionCreateEvent extends ClientEvent<"interactionCrea
     }
   }
 }
+
+export default InteractionCreateEvent;

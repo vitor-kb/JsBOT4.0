@@ -2,8 +2,7 @@ import { Command } from "..";
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import type { Metadata } from "..";
 import type { ChatInputCommandInteraction } from "discord.js";
-
-export default class PlayCommand extends Command {
+class PlayCommand extends Command {
   readonly name = "play";
   override readonly inVoiceChannel = true;
   readonly slashBuilder = new SlashCommandBuilder()
@@ -41,3 +40,6 @@ export default class PlayCommand extends Command {
       });
   }
 }
+
+
+export default PlayCommand;

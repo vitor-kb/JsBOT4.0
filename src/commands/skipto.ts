@@ -2,7 +2,7 @@ import { Command } from "..";
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import type { ChatInputCommandInteraction } from "discord.js";
 
-export default class SkipToCommand extends Command {
+class SkipToCommand extends Command {
   readonly name = "skipto";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
@@ -30,3 +30,5 @@ export default class SkipToCommand extends Command {
     }
   }
 }
+
+export default SkipToCommand;

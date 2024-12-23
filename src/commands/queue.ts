@@ -3,7 +3,7 @@ import { RepeatMode } from "distube";
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import type { ChatInputCommandInteraction } from "discord.js";
 
-export default class QueueCommand extends Command {
+class QueueCommand extends Command {
   readonly name = "queue";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
@@ -58,3 +58,5 @@ export default class QueueCommand extends Command {
     });
   }
 }
+
+export default QueueCommand;

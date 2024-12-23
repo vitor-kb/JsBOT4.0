@@ -3,7 +3,7 @@ import { DisTubeEvent } from "../..";
 import { Colors, EmbedBuilder } from "discord.js";
 import type { DisTubeError, Queue } from "distube";
 
-export default class NoRelatedEvent extends DisTubeEvent<Events.NO_RELATED> {
+class NoRelatedEvent extends DisTubeEvent<Events.NO_RELATED> {
   readonly name = Events.NO_RELATED;
   run(queue: Queue, error: DisTubeError) {
     queue.textChannel?.send({
@@ -11,3 +11,5 @@ export default class NoRelatedEvent extends DisTubeEvent<Events.NO_RELATED> {
     });
   }
 }
+
+export default NoRelatedEvent

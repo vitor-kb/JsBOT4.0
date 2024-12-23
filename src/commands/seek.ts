@@ -2,7 +2,7 @@ import { Command } from "..";
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import type { ChatInputCommandInteraction } from "discord.js";
 
-export default class SeekCommand extends Command {
+class SeekCommand extends Command {
   readonly name = "seek";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
@@ -22,3 +22,5 @@ export default class SeekCommand extends Command {
     });
   }
 }
+
+export default SeekCommand;

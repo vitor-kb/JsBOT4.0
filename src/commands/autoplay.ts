@@ -2,7 +2,7 @@ import { Command } from "..";
 import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import type { ChatInputCommandInteraction } from "discord.js";
 
-export default class AutoplayCommand extends Command {
+class AutoplayCommand extends Command {
   readonly name = "autoplay";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
@@ -25,3 +25,5 @@ export default class AutoplayCommand extends Command {
     }
   }
 }
+
+export default AutoplayCommand;

@@ -45,13 +45,13 @@ export const followUp = async (
 class DisTubeClient extends Client<true> {
   distube = new DisTube(this, {
     plugins: [
-      new YouTubePlugin({cookies: JSON.parse(fs.readFileSync('cookies.json', 'utf-8')) }),
+      new YouTubePlugin({ cookies: JSON.parse(fs.readFileSync('cookies.json', 'utf-8')) }),
       new SoundCloudPlugin(),
       new SpotifyPlugin(),
       new DeezerPlugin(),
       new DirectLinkPlugin(),
       new FilePlugin(),
-      new YtDlpPlugin()
+      new YtDlpPlugin({ update: true })
     ],
     emitAddListWhenCreatingQueue: true,
     emitAddSongWhenCreatingQueue: true,

@@ -1,7 +1,7 @@
 import { ClientEvent } from "../..";
 import { type Client, Routes } from "discord.js";
 
-export default class ErrorEvent extends ClientEvent<"ready"> {
+class ErrorEvent extends ClientEvent<"ready"> {
   readonly name = "ready";
   async run(c: Client<true>) {
     console.log(`Logado como: ${c.user.tag}!`);
@@ -11,3 +11,5 @@ export default class ErrorEvent extends ClientEvent<"ready"> {
     });
   }
 }
+
+export default ErrorEvent;

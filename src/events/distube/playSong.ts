@@ -3,7 +3,7 @@ import { EmbedBuilder } from "discord.js";
 import { DisTubeEvent, type Metadata, followUp } from "../..";
 import type { Queue, Song } from "distube";
 
-export default class PlaySongEvent extends DisTubeEvent<Events.PLAY_SONG> {
+class PlaySongEvent extends DisTubeEvent<Events.PLAY_SONG> {
   readonly name = Events.PLAY_SONG;
   run(queue: Queue, song: Song<Metadata>) {
     followUp(
@@ -13,3 +13,5 @@ export default class PlaySongEvent extends DisTubeEvent<Events.PLAY_SONG> {
     ).catch(console.error);
   }
 }
+
+export default PlaySongEvent;

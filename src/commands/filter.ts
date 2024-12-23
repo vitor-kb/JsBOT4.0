@@ -3,7 +3,7 @@ import { EmbedBuilder, SlashCommandBuilder } from "discord.js";
 import type { ChatInputCommandInteraction } from "discord.js";
 import { defaultFilters } from "distube";
 
-export default class FilterCommand extends Command {
+class FilterCommand extends Command {
   readonly name = "filter";
   override readonly inVoiceChannel = true;
   override readonly playing = true;
@@ -32,3 +32,5 @@ export default class FilterCommand extends Command {
     });
   }
 }
+
+export default FilterCommand;

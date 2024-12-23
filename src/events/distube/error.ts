@@ -3,7 +3,7 @@ import { EmbedBuilder } from "discord.js";
 import { DisTubeEvent, type Metadata, followUp } from "../..";
 import type { Queue, Song } from "distube";
 
-export default class ErrorEvent extends DisTubeEvent<Events.ERROR> {
+class ErrorEvent extends DisTubeEvent<Events.ERROR> {
   readonly name = Events.ERROR;
   async run(error: Error, queue: Queue, song?: Song<Metadata>) {
     if (song) {
@@ -23,3 +23,5 @@ export default class ErrorEvent extends DisTubeEvent<Events.ERROR> {
     }
   }
 }
+
+export default ErrorEvent;
