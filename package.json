@@ -29,7 +29,7 @@
         "@distube/youtube": "^1.0.4",
         "@distube/yt-dlp": "^2.0.1",
         "@distube/ytdl-core": "^4.15.8",
-        "discord.js": "^14.16.3",
+        "discord.js": "^14.17.3",
         "distube": "^5.0.4",
         "dotenv": "^16.4.7",
         "node-opus": "^0.3.3",
@@ -37,17 +37,17 @@
         "sodium-native": "^4.3.1"
     },
     "devDependencies": {
-        "@eslint/js": "^9.17.0",
-        "@types/node": "^22.10.2",
-        "discord.js": "^14.16.3",
-        "eslint": "^9.17.0",
+        "@eslint/js": "^9.18.0",
+        "@types/node": "^22.10.5",
+        "discord.js": "^14.17.3",
+        "eslint": "^9.18.0",
         "eslint-config-distube": "^1.7.1",
         "globals": "^15.14.0",
         "prettier": "^3.4.2",
         "ts-node": "^10.9.2",
         "tsup": "^8.3.5",
-        "typescript": "^5.7.2",
-        "typescript-eslint": "^8.18.2"
+        "typescript": "^5.7.3",
+        "typescript-eslint": "^8.19.1"
     },
     "nano-staged": {
         "*.js": [
