@@ -23,7 +23,6 @@ import DeezerPlugin from "@distube/deezer";
 import { DirectLinkPlugin } from "@distube/direct-link";
 import { YtDlpPlugin } from "@distube/yt-dlp";
 import dotenv from "dotenv";
-import fs from "fs";
 
 dotenv.config();
 
@@ -45,7 +44,7 @@ export const followUp = async (
 class DisTubeClient extends Client<true> {
   distube = new DisTube(this, {
     plugins: [
-      new YouTubePlugin({ cookies: JSON.parse(fs.readFileSync('cookies.json', 'utf-8')) }),
+      new YouTubePlugin(),
       new SoundCloudPlugin(),
       new SpotifyPlugin(),
       new DeezerPlugin(),
